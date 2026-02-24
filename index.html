@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title>나랑 결혼할래?</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app" id="app">
+      <section class="view view--question" id="view-question" aria-hidden="false">
+        <div class="stage" id="stage" aria-label="프로포즈 화면">
+          <div class="card">
+            <p class="eyebrow">To. 깜순</p>
+            <h1 class="title">나랑 결혼할래?</h1>
+            <p class="subtitle">대답은 단 하나만 가능해요.</p>
+
+            <div class="actions">
+              <button class="btn btn--yes" id="yesBtn" type="button">예</button>
+            </div>
+          </div>
+
+          <button class="btn btn--no" id="noBtn" type="button" aria-label="아니오 버튼" tabindex="-1">
+            <span class="btn__label">아니오</span>
+            <span class="btn__meta" aria-hidden="true">3초 꾹</span>
+          </button>
+
+          <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+        </div>
+      </section>
+
+      <section class="view view--success" id="view-success" aria-hidden="true">
+        <div class="success">
+          <h1 class="title">깜돌과 깜순은 행복하게 살았답니다~</h1>
+          <p class="subtitle">오늘의 “예”가, 평생의 “우리”가 되길.</p>
+          <div class="actions">
+            <button class="btn btn--primary" id="restartBtn" type="button">좋아!</button>
+          </div>
+          <div class="confetti" id="confetti" aria-hidden="true"></div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
